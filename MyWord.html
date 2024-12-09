@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWord</title>
+    <link rel="stylesheet" href="MyWord.css">
+</head>
+<body>
+    <script src="MyWord.js" defer></script>
+    <div id="container">
+        <div id="cabeca" class="cabeca">
+            MyWord
+            <button id="info" class="info">?</button>
+        </div>
+        <div id="funcionalidades" class="funcionalidades">
+            <input type="text" id="botvelha" maxlength="30" placeholder="Palavra velha">
+            <input type="text" id="botnova" maxlength="30" placeholder="Palavra nova">
+            <input type="text" id="procurarpar" maxlength="30" placeholder="Procurar">
+            <p><strong>Palavra sugerida:</strong> <span id="suggestedWord"></span></p>
+
+            
+        </div>
+        <textarea id="texto" class="texto" placeholder="INSIRA SEU TEXTO AQUI" spellcheck="false"></textarea>
+        <div id="pares" class="pares">
+            SEUS PARES:
+            <ul id="listapares"></ul>
+            <input type="number" id="botpares" placeholder="Excluir por ID" min="0">
+        </div>
+        <div id="freq" class="freq">
+            RECOMENDAÇÕES:
+            <ul id="listafreq"></ul>
+            <input type="number" id="botfreq" placeholder="QTD de palavras" min="0" max="20">
+        </div>
+        <div id="acoes" class="acoes">
+            <input type="file" id="importarTXT" accept=".txt">
+            <button id="exportar"onclick="exportarParesParaTXT()">Exportar</button>
+        </div>
+    </div>
+
+   
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Sobre o MyWord</h2>
+            <p>Bem vindo ao MyWord,construa sua lista de vocabularios ou sinonimos no seu ritmo,adicione palavras novas e velhas,veja a frequencia de palavras no texto,e procure os pares desejados da sua lista,exporte e importe em txt,aproveite.</p>
+        </div>
+    </div>
+</body>
+</html>
